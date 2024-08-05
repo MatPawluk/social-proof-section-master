@@ -13,12 +13,21 @@ body {
   background-position: top left, bottom -200px right;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 @media screen and (min-width: 992px) {
   body {
     background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
     background-position: top left, bottom -200px right;
   }
+}
+
+main {
+  margin: auto;
+}
+
+footer {
+  margin-top: auto;
 }/*# sourceMappingURL=main.css.map */
