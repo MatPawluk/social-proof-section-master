@@ -22,7 +22,137 @@ body {
   }
 }
 main {
-  margin: auto;
+  margin-top: 50px;
+  @media screen and (min-width: 992px) {
+    margin-top: 150px;
+  }
+  .container {
+    margin: auto;
+    max-width: 1400px;
+    @media screen and (max-width: 992px) {
+      max-width: 400px;
+    }
+    .top {
+      text-align: center;
+      &__left {
+        h1 {
+          font-size: 36px;
+          color: $Very-Dark-Magenta;
+          margin-bottom: 15px;
+        }
+        p {
+          color: $Dark-Grayish-Magenta;
+          line-height: 1.5;
+        }
+      }
+      &__right {
+        color: $Very-Dark-Magenta;
+        font-weight: 600;
+        &-review {
+          background-color: $Light-Grayish-Magenta;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          padding: 8px 0;
+          .stars {
+            margin-bottom: 8px;
+          }
+        }
+      }
+      @media screen and (min-width: 996px) {
+        display: flex;
+        text-align: left;
+
+        &__left {
+          width: 100%;
+
+          h1 {
+            font-size: 42px;
+            width: 40%;
+          }
+          p {
+            width: 45%;
+          }
+        }
+        &__right {
+          padding-top: 50px;
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          //   align-items: flex-end;
+          &-review {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 15px 20px 15px 20px;
+            width: 450px;
+
+            @for $i from 2 through 10 {
+              &:nth-child(#{$i}) {
+                margin-left: #{($i - 1) * 40}px;
+              }
+            }
+            .stars {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+      padding: 40px 0;
+
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: 100px;
+      }
+      &__card {
+        background-color: $Very-Dark-Magenta;
+        border-radius: 8px;
+        padding: 40px 30px;
+        color: $White;
+        line-height: 1.5;
+        @media screen and (min-width: 992px) {
+          @for $i from 2 through 10 {
+            &:nth-child(#{$i}) {
+              margin-top: #{($i - 1) * 25}px;
+              margin-bottom: #{($i - 1) * 25}px;
+            }
+          }
+        }
+        &-user {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 25px;
+
+          .avatar {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .name {
+            p:first-child {
+              font-weight: 600;
+            }
+            p:last-child {
+              color: $Soft-Pink;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 footer {
   margin-top: auto;
