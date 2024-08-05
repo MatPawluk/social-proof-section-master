@@ -10,9 +10,15 @@ body {
   min-height: 100vh;
   background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
   background-repeat: no-repeat;
-  background-position: top left, bottom -50% right;
+  background-position: top left, bottom -200px right;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom -200px right;
+  }
 }/*# sourceMappingURL=main.css.map */
