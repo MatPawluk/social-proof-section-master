@@ -1,0 +1,16 @@
+@use "./colors" as *;
+@use "./reset" as *;
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  background-image: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom -50% right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
